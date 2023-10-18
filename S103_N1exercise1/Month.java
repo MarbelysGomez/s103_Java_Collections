@@ -3,27 +3,32 @@ package s103_Java_Collections.S103_N1exercise1;
 import java.util.Objects;
 
 public class Month {
-    private int number;
+    private String name;
 
-    public Month(int number){
-        this.number = number;
+    public Month(String name) {
+        this.name = name;
     }
-    public int getNumber(){
-        return this.number;
+    public String getName() {
+        return this.name;
     }
-    public void setNumber(int number){
-        this.number = number;
+    public void setName(String name) {
+        this.name = name;
     }
-    public boolean equals(Object o) {
-        if(this == o) return true;
-        if(o == null || getClass() != o.getClass()) return false;
-        Month month = (Month) o;
-        return number == month.number;
-    }
+    @Override
     public int hashCode() {
-        return Objects.hash(number);
+        return Objects.hash(getName());
     }
-    public String toString(){
-        return "This month is the: " + number + "th.";
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj)
+            return true;
+        if(!(obj instanceof Month))
+            return false;
+        Month monthObj = (Month) obj;
+        return Objects.equals(getName(), monthObj.getName());
+    }
+    @Override
+    public String toString() {
+        return "Month: " + this.name;
     }
 }

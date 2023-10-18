@@ -1,11 +1,12 @@
 package s103_Java_Collections.S103_N2exercise2;
 
 import java.util.TreeSet;
+import java.util.Set;
 
-public class Restaurant2_App {
+public class Main {
     public static void main(String[] args) {
 
-        TreeSet<Restaurant2> restSet = new TreeSet<>();
+        Set<Restaurant2> restSet = new TreeSet<>();
 
             Restaurant2 rest1 = new Restaurant2("ITAcademy Coffee shop", 9);
             Restaurant2 rest2 = new Restaurant2("Bar Barcelona Activa", 1);

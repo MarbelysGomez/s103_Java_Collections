@@ -3,7 +3,7 @@ package s103_Java_Collections.S103_N2exercise1;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Restaurant_App {
+public class Main {
     public static void main(String[] args) {
 
         Set<Restaurant> restaurantSet = new HashSet<>();
